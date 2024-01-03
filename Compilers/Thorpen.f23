@@ -1,0 +1,30 @@
+program Thorpen
+{
+    procedure pr_int(integer i)
+    {
+        string title;
+        title := "The result is: ";
+        print_string(title);
+        print_integer(i);
+        print_string("\n");
+    }
+
+    function integer add(integer a, integer b)
+    {
+        integer result;
+        result := a + b;
+        return result;
+    }
+
+    function integer main()
+    {
+        integer i;
+        integer j;
+        integer sum;
+
+        i := 123;
+        j := 321;
+        sum := add(i, j);
+        pr_int(sum);
+    }
+}

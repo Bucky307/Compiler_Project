@@ -1,0 +1,38 @@
+program Harris
+{
+    // Function to check whether three sides can form a triangle or not
+    function integer is_triangle(double a, double b, double c)
+    {
+        if (a + b > c && a + c > b && b + c > a) then
+            return 1;   // Yes, the sides can form a triangle
+        else
+            return 0;   // No, the sides cannot form a triangle
+    }
+
+    function integer main()
+    {
+        // Sides of the potential triangle
+        double a; 
+        double b;
+        double c;
+        integer result; // Result from is_triangle function
+
+        print_string("Enter the first side: ");
+        read_double(a);
+
+        print_string("Enter the second side: ");
+        read_double(b);
+
+        print_string("Enter the third side: ");
+        read_double(c);
+
+        result := is_triangle(a, b, c);
+
+        if (result == 1) then
+            print_string("The given sides can form a triangle.");
+        else
+            print_string("The given sides cannot form a triangle.");
+
+        return 0;
+    }
+}
